@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<searchFilter>
+    <productType>Laptop</productType>
+    <brand>ASUS</brand>
+    <allowedSum>50000</allowedSum>
+</searchFilter>
