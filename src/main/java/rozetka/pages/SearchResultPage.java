@@ -27,6 +27,9 @@ public class SearchResultPage extends BasePage {
     @FindBy(xpath = "//rz-cart/button[@type='button']")
     private WebElement cartButton;
 
+    public WebElement getSidebarSearchInput() {
+        return sidebarSearchInput;
+    }
 
     public SearchResultPage(WebDriver driver) {
         super(driver);
