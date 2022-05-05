@@ -12,6 +12,7 @@ import rozetka.pages.HomePage;
 import rozetka.pages.SearchResultPage;
 import rozetka.pages.ShoppingCartPage;
 import util.PropertiesReader;
+import util.WebdriverMultitone;
 import util.WebdriverSingletone;
 
 import javax.xml.bind.JAXBContext;
@@ -21,24 +22,41 @@ import java.io.File;
 
 
 public class BaseTest {
-
-    PropertiesReader pr = new PropertiesReader();
-    WebDriver driver;
-
-    /*@BeforeTest
-    public void profileSetUp() {
-        System.setProperty(pr.getDriverName(), pr.getDriverLocation());
-    }*/
+    public WebDriver getDriver() {
+        return WebdriverMultitone.getMultiDriver();
+    }
 
     @BeforeTest
-    public void profileSetUp() { WebdriverSingletone.setProperties(); }
+    public void set() {
+        WebdriverSingletone.setProperties();
+    }
 
     @BeforeMethod
-    public void testSetup() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get(pr.getURL());
+    public void setUpTest() {
+        getDriver();
     }
+
+    @AfterMethod
+    public void close() {
+        WebdriverMultitone.closeMultiDriver();
+    }
+    //PropertiesReader pr = new PropertiesReader();
+    //WebDriver driver;
+
+    //@BeforeTest
+    //public void profileSetUp() {
+    //    System.setProperty(pr.getDriverName(), pr.getDriverLocation());
+    //}
+
+    /*@BeforeTest
+    public void profileSetUp() { WebdriverSingletone.setProperties(); }*/
+
+    //@BeforeMethod
+    //public void testSetup() {
+     //   driver = new ChromeDriver();
+     //   driver.manage().window().maximize();
+     //   driver.get(pr.getURL());
+    //}
 
     /*@BeforeMethod
     public void testSetup() {
@@ -49,19 +67,19 @@ public class BaseTest {
     /*@BeforeMethod
     public void testSetup() { WebdriverSingletone.getDriver(); }*/
 
-    @AfterMethod
-    public void tearDown() {
-        driver.close();
-    }
+    //@AfterMethod
+    //public void tearDown() {
+     //   driver.close();
+    //}
 
     /*@AfterMethod
     public void tearDown() {
         WebdriverSingletone.closeDriver();
     }*/
 
-    public WebDriver getDriver() {
-        return driver;
-    }
+    //public WebDriver getDriver() {
+    //    return driver;
+    //}
 
     public HomePage getHomePage() {
         return new HomePage(getDriver());

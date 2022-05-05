@@ -23,14 +23,24 @@ public class BasePage {
         driver.manage().timeouts().implicitlyWait(timeToWait, TimeUnit.SECONDS);
     }
 
-    /*public void waitForPageLoadComplete(long timeToWait) {
+    public void waitForPageLoadComplete(long timeToWait) {
         new WebDriverWait(driver, Duration.ofSeconds(timeToWait)).until(
                 webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
-    }*/
+    }
 
     public void waitForVisibilityOfElement(long timeToWait, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
         wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitForAjaxToComplete(long timeToWait) {
+        new WebDriverWait(driver, Duration.ofSeconds(timeToWait)).until(
+                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return window.jQuery != undefined && jQuery.active == 0;"));
+    }
+
+    public void waitReadyStatementOfElement(long timeToWait, WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
 }

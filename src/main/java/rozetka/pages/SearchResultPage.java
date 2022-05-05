@@ -35,9 +35,22 @@ public class SearchResultPage extends BasePage {
         super(driver);
     }
 
-    public void searchBrandByKeyword(String keyword){
+    public WebElement searchBrandByKeyword(String keyword){
         sidebarSearchInput.clear();
         sidebarSearchInput.sendKeys(keyword, Keys.ENTER);
+        return null;
+    }
+
+    public WebElement getSortProductButton() {
+        return sortProductButton;
+    }
+
+    public List<WebElement> getSortProductButtonOptionsList() {
+        return sortProductButtonOptionsList;
+    }
+
+    public List<WebElement> getAddProductToCartButtonList() {
+        return AddProductToCartButtonList;
     }
 
     public void filterBrandInCheckBox(){
