@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <filterDataRozetka>
     <searchFiltersRozetka>
-        <productType>Laptop</productType>
-        <brand>ASUS</brand>
+        <productType>Ноутбук</productType>
+        <brand>Acer</brand>
         <allowedSum>50000</allowedSum>
     </searchFiltersRozetka>
     <searchFiltersRozetka>
-        <productType>Laptop</productType>
-        <brand>HP</brand>
-        <allowedSum>60000</allowedSum>
+        <productType>Холодильник</productType>
+        <brand>LG</brand>
+        <allowedSum>40000</allowedSum>
     </searchFiltersRozetka>
     <searchFiltersRozetka>
-        <productType>Laptop</productType>
-        <brand>Acer</brand>
-        <allowedSum>55000</allowedSum>
-    </searchFiltersRozetka>
-    <searchFiltersRozetka>
-        <productType>Laptop</productType>
+        <productType>Смартфон</productType>
         <brand>Samsung</brand>
-        <allowedSum>60000</allowedSum>
+        <allowedSum>45000</allowedSum>
     </searchFiltersRozetka>
     <searchFiltersRozetka>
-        <productType>Laptop</productType>
-        <brand>HP</brand>
-        <allowedSum>70000</allowedSum>
+        <productType>Телевізор</productType>
+        <brand>LG</brand>
+        <allowedSum>80000</allowedSum>
+    </searchFiltersRozetka>
+    <searchFiltersRozetka>
+        <productType>Планшет</productType>
+        <brand>Asus</brand>
+        <allowedSum>50000</allowedSum>
     </searchFiltersRozetka>
 </filterDataRozetka>

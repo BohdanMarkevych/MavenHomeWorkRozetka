@@ -1,5 +1,6 @@
 package rozetka.pages;
 
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,8 +16,16 @@ public class SearchResultPage extends BasePage {
     @FindBy(xpath = "//ul[@class='checkbox-filter']/descendant::a[@_ngcontent-rz-client-c137]")
     private List<WebElement> checkBoxBrandList;
 
+    @FindBy(xpath = "//ul[@class='checkbox-filter']/descendant::a[@_ngcontent-rz-client-c137][1]")
+    private WebElement checkBoxBrandElement;
+
     @FindBy(xpath = "//div[@class='goods-tile__inner']/descendant::app-buy-button[@extclass='goods-tile__buy-button']")
     private List<WebElement> AddProductToCartButtonList;
+
+    @FindBy(xpath = "//div[@class='goods-tile__inner']/descendant::app-buy-button[@extclass='goods-tile__buy-button'][1]")
+    private WebElement AddProductToCartPanel;
+
+
 
     @FindBy(xpath = "//select[@_ngcontent-rz-client-c184]")
     private WebElement sortProductButton;
@@ -35,39 +44,40 @@ public class SearchResultPage extends BasePage {
         super(driver);
     }
 
-    public WebElement searchBrandByKeyword(String keyword){
-        sidebarSearchInput.clear();
+    public void searchBrandByKeyword(String keyword){
+        waitReadyStatementOfElement(40, getSidebarSearchInput());
         sidebarSearchInput.sendKeys(keyword, Keys.ENTER);
-        return null;
     }
 
     public WebElement getSortProductButton() {
         return sortProductButton;
     }
 
-    public List<WebElement> getSortProductButtonOptionsList() {
-        return sortProductButtonOptionsList;
-    }
-
-    public List<WebElement> getAddProductToCartButtonList() {
-        return AddProductToCartButtonList;
-    }
-
     public void filterBrandInCheckBox(){
+        waitForPageLoadComplete(50);
+        //waitReadyStatementOfElement(40, checkBoxBrandElement);
         checkBoxBrandList.get(0).click();
     }
 
-    public void clickSortProductButton(){
+
+    public void clickSortProductOptionButton(){
+        waitReadyStatementOfElement(40, getSortProductButton());
         sortProductButton.click();
     }
 
-    public void filterProductByPrice(){
+    public void filterProductByPriceInOptionList(){
+        waitForPageLoadComplete(50);
         sortProductButtonOptionsList.get(0).click();
     }
 
+
+
     public void addFirstProductToCart(){
+        waitForPageLoadComplete(50);
+        waitReadyStatementOfElement(40, AddProductToCartPanel);
         AddProductToCartButtonList.get(0).click();
     }
+
 
     public void clickCartButton(){
         cartButton.click();

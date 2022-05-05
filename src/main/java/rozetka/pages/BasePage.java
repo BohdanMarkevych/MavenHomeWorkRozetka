@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -31,16 +32,17 @@ public class BasePage {
     public void waitForVisibilityOfElement(long timeToWait, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
         wait.until(ExpectedConditions.visibilityOf(element));
-    }
 
-    public void waitForAjaxToComplete(long timeToWait) {
-        new WebDriverWait(driver, Duration.ofSeconds(timeToWait)).until(
-                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return window.jQuery != undefined && jQuery.active == 0;"));
     }
 
     public void waitReadyStatementOfElement(long timeToWait, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
         wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void waitVisibilityOfElement(long timeToWait, WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeToWait));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 
 }

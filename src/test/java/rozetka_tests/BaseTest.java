@@ -28,7 +28,7 @@ public class BaseTest {
 
     @BeforeTest
     public void set() {
-        WebdriverSingletone.setProperties();
+        WebdriverMultitone.setProperties();
     }
 
     @BeforeMethod
@@ -40,46 +40,6 @@ public class BaseTest {
     public void close() {
         WebdriverMultitone.closeMultiDriver();
     }
-    //PropertiesReader pr = new PropertiesReader();
-    //WebDriver driver;
-
-    //@BeforeTest
-    //public void profileSetUp() {
-    //    System.setProperty(pr.getDriverName(), pr.getDriverLocation());
-    //}
-
-    /*@BeforeTest
-    public void profileSetUp() { WebdriverSingletone.setProperties(); }*/
-
-    //@BeforeMethod
-    //public void testSetup() {
-     //   driver = new ChromeDriver();
-     //   driver.manage().window().maximize();
-     //   driver.get(pr.getURL());
-    //}
-
-    /*@BeforeMethod
-    public void testSetup() {
-        WebdriverSingletone.setChromeDriver();
-    }*/
-
-
-    /*@BeforeMethod
-    public void testSetup() { WebdriverSingletone.getDriver(); }*/
-
-    //@AfterMethod
-    //public void tearDown() {
-     //   driver.close();
-    //}
-
-    /*@AfterMethod
-    public void tearDown() {
-        WebdriverSingletone.closeDriver();
-    }*/
-
-    //public WebDriver getDriver() {
-    //    return driver;
-    //}
 
     public HomePage getHomePage() {
         return new HomePage(getDriver());

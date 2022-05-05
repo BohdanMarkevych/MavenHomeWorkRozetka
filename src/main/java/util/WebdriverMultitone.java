@@ -5,21 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WebdriverMultitone {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
-    private static PropertiesReader propertiesReader = new PropertiesReader();
+    private static PropertiesReader pr = new PropertiesReader();
 
-
-    public static void closeMultiDriver() {
-        try{
-            if(driver != null){
-                driver.get().quit();
-            }
-        }catch (Exception e){
-            System.err.println("Cant close Webdriver");
-
-        }finally {
-            driver.remove();
-        }
-    }
 
     public static WebDriver getMultiDriver() {
         if(driver.get()!=null){
@@ -28,11 +15,28 @@ public class WebdriverMultitone {
         WebDriver instance;
         instance = new ChromeDriver(){
             {manage().window().maximize();
-                get(propertiesReader.getURL());
+                get(pr.getURL());
             }
         };
 
         driver.set(instance);
         return driver.get();
+    }
+
+    public static void setProperties() {
+        System.setProperty(pr.getDriverName(), pr.getDriverLocation());
+    }
+
+    public static void closeMultiDriver() {
+        try{
+            if(driver != null){
+                driver.get().quit();
+            }
+        }catch (Exception e){
+            System.err.println("Webdriver isn't closed");
+
+        }finally {
+            driver.remove();
+        }
     }
 }
