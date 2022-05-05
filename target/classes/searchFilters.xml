@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<filterDataRozetka>
+    <searchFiltersRozetka>
+        <productType>Laptop</productType>
+        <brand>ASUS</brand>
+        <allowedSum>50000</allowedSum>
+    </searchFiltersRozetka>
+    <searchFiltersRozetka>
+        <productType>Laptop</productType>
+        <brand>HP</brand>
+        <allowedSum>60000</allowedSum>
+    </searchFiltersRozetka>
+    <searchFiltersRozetka>
+        <productType>Laptop</productType>
+        <brand>Acer</brand>
+        <allowedSum>55000</allowedSum>
+    </searchFiltersRozetka>
+    <searchFiltersRozetka>
+        <productType>Laptop</productType>
+        <brand>Samsung</brand>
+        <allowedSum>60000</allowedSum>
+    </searchFiltersRozetka>
+    <searchFiltersRozetka>
+        <productType>Laptop</productType>
+        <brand>HP</brand>
+        <allowedSum>70000</allowedSum>
+    </searchFiltersRozetka>
+</filterDataRozetka>
