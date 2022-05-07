@@ -54,8 +54,6 @@ public class SearchResultPage extends BasePage {
     }
 
     public void filterBrandInCheckBox(){
-        waitForPageLoadComplete(50);
-        //waitReadyStatementOfElement(40, checkBoxBrandElement);
         checkBoxBrandList.get(0).click();
     }
 

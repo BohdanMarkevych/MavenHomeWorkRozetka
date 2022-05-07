@@ -11,9 +11,9 @@ import org.testng.annotations.DataProvider;
 import rozetka.pages.HomePage;
 import rozetka.pages.SearchResultPage;
 import rozetka.pages.ShoppingCartPage;
-import util.PropertiesReader;
+
 import util.WebdriverMultitone;
-import util.WebdriverSingletone;
+
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

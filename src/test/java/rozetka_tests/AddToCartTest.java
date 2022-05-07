@@ -13,7 +13,7 @@ public class AddToCartTest extends BaseTest {
     private static final long DEFAULT_WAITING_TIME = 500;
 
     @Test(dataProvider = "useFilterData")
-    public void verifyThatCartContainsBillThatIsLessThanSpecifiedSum(String type, String brand, int sum) throws JAXBException, InterruptedException {
+    public void verifyThatCartContainsBillThatIsLessThanSpecifiedSum(String type, String brand, int sum) {
 
             HomePage homePage = getHomePage();
             homePage.implicitWait(DEFAULT_WAITING_TIME);
@@ -23,7 +23,6 @@ public class AddToCartTest extends BaseTest {
             searchResultPage.filterBrandInCheckBox();
             searchResultPage.implicitWait(DEFAULT_WAITING_TIME);
             searchResultPage.clickSortProductOptionButton();
-            searchResultPage.implicitWait(DEFAULT_WAITING_TIME);
             searchResultPage.filterProductByPriceInOptionList();
             searchResultPage.implicitWait(DEFAULT_WAITING_TIME);
             searchResultPage.addFirstProductToCart();

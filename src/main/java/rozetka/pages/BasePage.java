@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -41,7 +40,7 @@ public class BasePage {
     }
 
     public void waitVisibilityOfElement(long timeToWait, WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeToWait));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
