@@ -11,8 +11,8 @@
         <allowedSum>40000</allowedSum>
     </searchFiltersRozetka>
     <searchFiltersRozetka>
-        <productType>Смартфон</productType>
-        <brand>Samsung</brand>
+        <productType>Велосипед</productType>
+        <brand>Champion</brand>
         <allowedSum>45000</allowedSum>
     </searchFiltersRozetka>
     <searchFiltersRozetka>
@@ -21,8 +21,8 @@
         <allowedSum>80000</allowedSum>
     </searchFiltersRozetka>
     <searchFiltersRozetka>
-        <productType>Планшет</productType>
-        <brand>Asus</brand>
-        <allowedSum>50000</allowedSum>
+        <productType>Драбина</productType>
+        <brand>Drabest</brand>
+        <allowedSum>20000</allowedSum>
     </searchFiltersRozetka>
 </filterDataRozetka>
