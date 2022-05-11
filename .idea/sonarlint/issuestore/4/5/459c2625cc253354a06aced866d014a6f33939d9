@@ -1,0 +1,12 @@
+
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ı¬•­ÿÿÿÿÿ8íÓéŠ0
+a
+java:S2259'"DA "NullPointerException" could be thrown; "driver" is nullable here.(ÑÀä‹8„ÕéŠ0
+\
+java:S1118":Add a private constructor to hide the implicit public one.(àËâÿÿÿÿÿ8ÕéŠ0
+N
+java:S3599",Use another way to initialize this instance.(•ÀÉùÿÿÿÿ8ÁÕéŠ0
+u
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ŒùÉV8ÄÕéŠ0
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(ŒÍùùşÿÿÿÿ8ÜÕéŠ0
