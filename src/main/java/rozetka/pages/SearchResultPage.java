@@ -1,6 +1,9 @@
 package rozetka.pages;
 
 
+import decorator.Button;
+import decorator.CheckBox;
+import decorator.TextInput;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,45 +14,38 @@ import java.util.List;
 public class SearchResultPage extends BasePage {
 
     @FindBy(xpath = "//input[@_ngcontent-rz-client-c135]")
-    private WebElement sidebarSearchInput;
+    private TextInput sidebarSearchInput;
 
     @FindBy(xpath = "//ul[@class='checkbox-filter']/descendant::a[@_ngcontent-rz-client-c137]")
     private List<WebElement> checkBoxBrandList;
 
     @FindBy(xpath = "//ul[@class='checkbox-filter']/descendant::a[@_ngcontent-rz-client-c137][1]")
-    private WebElement checkBoxBrandElement;
+    private Button checkBoxBrandElement;
 
     @FindBy(xpath = "//div[@class='goods-tile__inner']/descendant::app-buy-button[@extclass='goods-tile__buy-button']")
-    private List<WebElement> AddProductToCartButtonList;
+    private List<WebElement> addProductToCartButtonList;
 
     @FindBy(xpath = "//div[@class='goods-tile__inner']/descendant::app-buy-button[@extclass='goods-tile__buy-button'][1]")
-    private WebElement AddProductToCartPanel;
-
-
+    private Button addProductToCartPanel;
 
     @FindBy(xpath = "//select[@_ngcontent-rz-client-c184]")
-    private WebElement sortProductButton;
+    private Button sortProductButton;
 
     @FindBy(xpath = "//option[@class='ng-star-inserted']")
     private List<WebElement> sortProductButtonOptionsList;
 
     @FindBy(xpath = "//rz-cart/button[@type='button']")
-    private WebElement cartButton;
-
-    public WebElement getSidebarSearchInput() {
-        return sidebarSearchInput;
-    }
+    private Button cartButton;
 
     public SearchResultPage(WebDriver driver) {
         super(driver);
     }
 
     public void searchBrandByKeyword(String keyword){
-        waitReadyStatementOfElement(40, getSidebarSearchInput());
         sidebarSearchInput.sendKeys(keyword, Keys.ENTER);
     }
 
-    public WebElement getSortProductButton() {
+    public Button getSortProductButton() {
         return sortProductButton;
     }
 
@@ -57,10 +53,8 @@ public class SearchResultPage extends BasePage {
         checkBoxBrandList.get(0).click();
     }
 
-
     public void clickSortProductOptionButton(){
-        waitReadyStatementOfElement(40, getSortProductButton());
-        sortProductButton.click();
+       sortProductButton.click();
     }
 
     public void filterProductByPriceInOptionList(){
@@ -72,8 +66,7 @@ public class SearchResultPage extends BasePage {
 
     public void addFirstProductToCart(){
         waitForPageLoadComplete(50);
-        waitReadyStatementOfElement(40, AddProductToCartPanel);
-        AddProductToCartButtonList.get(0).click();
+        addProductToCartButtonList.get(0).click();
     }
 
 
