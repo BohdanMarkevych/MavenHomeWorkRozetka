@@ -2,27 +2,7 @@
 <filterDataRozetka>
     <searchFiltersRozetka>
         <productType>Ноутбук</productType>
-        <brand>Acer</brand>
+        <brand>ASUS</brand>
         <allowedSum>50000</allowedSum>
-    </searchFiltersRozetka>
-    <searchFiltersRozetka>
-        <productType>Холодильник</productType>
-        <brand>LG</brand>
-        <allowedSum>40000</allowedSum>
-    </searchFiltersRozetka>
-    <searchFiltersRozetka>
-        <productType>Велосипед</productType>
-        <brand>Champion</brand>
-        <allowedSum>45000</allowedSum>
-    </searchFiltersRozetka>
-    <searchFiltersRozetka>
-        <productType>Телевізор</productType>
-        <brand>LG</brand>
-        <allowedSum>80000</allowedSum>
-    </searchFiltersRozetka>
-    <searchFiltersRozetka>
-        <productType>Драбина</productType>
-        <brand>Drabest</brand>
-        <allowedSum>20000</allowedSum>
     </searchFiltersRozetka>
 </filterDataRozetka>

@@ -7,8 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HomeWork" />
+        <module name="HomeWorkGradle" />
+        <module name="HomeWorkMaven" />
         <module name="RozetkaHomeWork" />
         <module name="HomeWorkDecorator" />
+        <module name="PageObjectHomeWork" />
       </profile>
     </annotationProcessing>
   </component>

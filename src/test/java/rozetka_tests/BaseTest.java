@@ -1,7 +1,7 @@
 package rozetka_tests;
 
 
-import model.SearchFilters;
+import modelExist.SearchFilters;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +13,7 @@ import rozetka.pages.HomePage;
 import rozetka.pages.SearchResultPage;
 import rozetka.pages.ShoppingCartPage;
 
-import util.WebdriverMultitone;
+import utilExist.WebdriverMultitone;
 
 
 import javax.xml.bind.JAXBContext;
@@ -54,7 +54,8 @@ public class BaseTest {
         return new ShoppingCartPage(getDriver());
     }
 
-    @DataProvider(name = "useFilterData", parallel = true)
+    //@DataProvider(name = "useFilterData", parallel = true)
+    @DataProvider(name = "useFilterData")
     public static Object[][] useFilterData() throws JAXBException {
         File file = new File("src\\main\\resources\\searchFilters.xml");
         JAXBContext jaxbContext = JAXBContext.newInstance(SearchFilters.class);

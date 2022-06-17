@@ -1,4 +1,4 @@
-package decorator;
+package decoratorOne;
 
 import org.openqa.selenium.WebElement;
 

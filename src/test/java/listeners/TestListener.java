@@ -13,13 +13,13 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        logger.info("The method " + result.getMethod().getMethodName() + " has started running.");
+        logger.info("The method " + result.getMethod().getMethodName() + " has started running now.");
     }
 
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        logger.info("The Test" + result.getName() + "is successes");
+        logger.info("The Test" + result.getName() + "is passed");
     }
 
     @Override

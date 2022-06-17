@@ -7,10 +7,11 @@ import org.testng.annotations.Test;
 import rozetka.pages.HomePage;
 import rozetka.pages.SearchResultPage;
 
+
 @Listeners({TestListener.class})
 public class AddToCartTest extends BaseTest {
 
-    private static final long DEFAULT_WAITING_TIME = 500;
+    private static final long DEFAULT_WAITING_TIME = 800;
 
 
     @Test(dataProvider = "useFilterData")

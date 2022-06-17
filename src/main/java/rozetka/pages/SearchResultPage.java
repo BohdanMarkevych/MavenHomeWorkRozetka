@@ -1,9 +1,8 @@
 package rozetka.pages;
 
 
-import decorator.Button;
-import decorator.CheckBox;
-import decorator.TextInput;
+import decoratorOne.Button;
+import decoratorOne.TextInput;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,13 +12,13 @@ import java.util.List;
 
 public class SearchResultPage extends BasePage {
 
-    @FindBy(xpath = "//input[@_ngcontent-rz-client-c135]")
+    @FindBy(xpath = "//input[@_ngcontent-rz-client-c134]")
     private TextInput sidebarSearchInput;
 
-    @FindBy(xpath = "//ul[@class='checkbox-filter']/descendant::a[@_ngcontent-rz-client-c137]")
+    @FindBy(xpath = "//ul[@class='checkbox-filter']/descendant::a[@_ngcontent-rz-client-c136]")
     private List<WebElement> checkBoxBrandList;
 
-    @FindBy(xpath = "//ul[@class='checkbox-filter']/descendant::a[@_ngcontent-rz-client-c137][1]")
+    @FindBy(xpath = "//ul[@class='checkbox-filter']/descendant::a[@_ngcontent-rz-client-c136][1]")
     private Button checkBoxBrandElement;
 
     @FindBy(xpath = "//div[@class='goods-tile__inner']/descendant::app-buy-button[@extclass='goods-tile__buy-button']")
@@ -28,7 +27,7 @@ public class SearchResultPage extends BasePage {
     @FindBy(xpath = "//div[@class='goods-tile__inner']/descendant::app-buy-button[@extclass='goods-tile__buy-button'][1]")
     private Button addProductToCartPanel;
 
-    @FindBy(xpath = "//select[@_ngcontent-rz-client-c184]")
+    @FindBy(xpath = "//select[@_ngcontent-rz-client-c181]")
     private Button sortProductButton;
 
     @FindBy(xpath = "//option[@class='ng-star-inserted']")
@@ -65,7 +64,8 @@ public class SearchResultPage extends BasePage {
 
 
     public void addFirstProductToCart(){
-        waitForPageLoadComplete(50);
+        //waitForPageLoadComplete(70);
+        implicitWait(50);
         addProductToCartButtonList.get(0).click();
     }
 

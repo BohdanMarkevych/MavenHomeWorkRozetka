@@ -1,7 +1,9 @@
 package rozetka.pages;
 
 
-import decorator.AbstractElement;
+
+
+import decoratorOne.AbstractElement;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,12 +17,6 @@ import java.util.concurrent.TimeUnit;
 
 
 public class BasePage {
-    /*WebDriver driver;
-
-    public BasePage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }*/
 
     WebDriver driver;
 
